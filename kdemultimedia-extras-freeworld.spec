@@ -29,12 +29,12 @@ BuildRequires: kdelibs-devel >= 6:%{version}
 %endif
 Requires(hint): xine-lib-extras-freeworld
 
-BuildRequires: akode-mpeg_decoder
-Requires: akode-mpeg_decoder
+BuildRequires: akode-extras-mpeg_decoder
+Requires: akode-extras-mpeg_decoder
 
 %if 0%{?ffmpeg}
-BuildRequires: akode-ffmpeg_decoder
-Requires: akode-ffmpeg_decoder
+BuildRequires: akode-extras-ffmpeg_decoder
+Requires: akode-extras-ffmpeg_decoder
 %endif
 
 Obsoletes: kdemultimedia-extras < 6:3.5.0-0.lvn.2
