@@ -1,4 +1,10 @@
 
+# Until akode is fixed -- Rex
+#if 0%{?fedora} > 4
+%if 0
+%define ffmpeg 1
+%endif
+
 # For the files list and SELinux scriptlets.
 %define libmpeg %{_libdir}/libmpeg-0.3.0.so
 
@@ -21,8 +27,15 @@ BuildRequires: kdelibs3-devel >= %{version}
 Requires: kdemultimedia-extras >= 6:%{version}
 BuildRequires: kdelibs-devel >= 6:%{version}
 %endif
-Requires: akode-extras
 Requires(hint): xine-lib-extras-freeworld
+
+BuildRequires: akode-mpeg_decoder
+Requires: akode-mpeg_decoder
+
+%if 0%{?ffmpeg}
+BuildRequires: akode-ffmpeg_decoder
+Requires: akode-ffmpeg_decoder
+%endif
 
 Obsoletes: kdemultimedia-extras < 6:3.5.0-0.lvn.2
 Provides: kdemultimedia-mp3 = %{epoch}:%{version}-%{release}
@@ -37,7 +50,7 @@ Requires(postun): /sbin/ldconfig
 %if 0%{?fedora} > 4 || 0%{?rhel} > 4
 BuildRequires: libXxf86dga-devel libXxf86vm-devel
 %endif
-BuildRequires: akode-devel akode-extras
+BuildRequires: akode-devel
 BuildRequires: taglib-devel libmad-devel lame-devel
 
 %description
@@ -150,7 +163,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/mcop/SplayPlayObject.mcopclass
 %{_libdir}/mcop/WAVPlayObject.mcopclass
 %{_libdir}/mcop/akodeMPEGPlayObject.mcopclass
-%if 0%{?fedora} > 4
+%if 0%{?ffmpeg} 
 %{_libdir}/mcop/akodeFFMPEGPlayObject.mcopclass
 %endif
 ## FIXME: devel-type stuff?, omit from packaging? -- Rex
