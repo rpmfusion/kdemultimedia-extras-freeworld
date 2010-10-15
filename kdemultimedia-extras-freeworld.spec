@@ -1,7 +1,7 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.5.1
-Release: 2%{?dist}
+Version: 4.5.2
+Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
 Group:   Applications/Multimedia
@@ -12,9 +12,11 @@ Source0: ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdemultimedia-%{version
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-BuildRequires:  ffmpeg-devel, libpng-devel, libjpeg-devel
+BuildRequires:  ffmpeg-devel
 BuildRequires:  glib2-devel
-BuildRequires:  kdemultimedia-devel
+BuildRequires:  libpng-devel
+BuildRequires:  libjpeg-devel
+
 Requires: kdelibs4%{?_isa} >= %{_kde4_version}
 
 Provides: ffmpegthumbnailer = %{version}-%{release}
@@ -30,8 +32,10 @@ This package contains multimedia applications, including:
 * ffmpegthumbnailer
 * kffmpegthumbnailer 
 
+
 %prep
 %setup -q -n kdemultimedia-%{version}
+
 
 %build
 
@@ -41,6 +45,7 @@ pushd %{_target_platform}
 popd
 
 make %{?_smp_mflags} -C %{_target_platform}/ffmpegthumbs
+
 
 %install
 rm -rf %{buildroot}
@@ -58,7 +63,11 @@ rm -rf %{buildroot}
 %{_kde4_libdir}/kde4/ffmpegthumbs.so
 %{_kde4_datadir}/kde4/services/ffmpegthumbs.desktop
 
+
 %changelog
+* Fri Oct 15 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.2-1
+- 4.5.2
+
 * Sun Sep 19 2010 Magnus Tuominen <magnus.tuominen@gmail.com> - 4.5.1-2
 - drop patch
 - obsolete < 15
