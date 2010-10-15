@@ -14,6 +14,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  ffmpeg-devel
 BuildRequires:  glib2-devel
+BuildRequires:  kdelibs4-devel >= %{version}
 BuildRequires:  libpng-devel
 BuildRequires:  libjpeg-devel
 
