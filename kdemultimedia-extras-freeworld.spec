@@ -1,6 +1,6 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.5.2
+Version: 4.5.3
 Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
@@ -66,6 +66,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Nov 18 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.3-1
+- 4.5.3
+
 * Fri Oct 15 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.2-1
 - 4.5.2
 
