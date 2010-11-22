@@ -1,14 +1,14 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.5.3
-Release: 2%{?dist}
+Version: 4.5.80
+Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
 Group:   Applications/Multimedia
 # see also: http://techbase.kde.org/Policies/Licensing_Policy
 License: GPLv2+
 URL:     http://www.kde.org/
-Source0: ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdemultimedia-%{version}.tar.bz2
+Source0: ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/kdemultimedia-%{version}.tar.bz2
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -67,6 +67,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Nov 22 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.80-1
+- 4.5.80 (4.6beta1)
+
 * Mon Nov 22 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.3-2
 - Obsoletes: ffmpegthumbnailer-devel too
 
