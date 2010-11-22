@@ -1,7 +1,7 @@
 
 Name:    kdemultimedia-extras-freeworld
 Version: 4.5.3
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: KDE Multimedia applications
 
 Group:   Applications/Multimedia
@@ -24,6 +24,7 @@ Provides: ffmpegthumbnailer = %{version}-%{release}
 Provides: kffmpegthumbnailer = %{version}-%{release}
 %if 0%{?fedora} && 0%{?fedora} < 15
 Obsoletes: ffmpegthumbnailer <= %{version}-%{release}
+Obsoletes: ffmpegthumbnailer-devel <= %{version}-%{release}
 Obsoletes: kffmpegthumbnailer <= %{version}-%{release}
 %endif
 
@@ -66,6 +67,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Nov 22 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.3-2
+- Obsoletes: ffmpegthumbnailer-devel too
+
 * Thu Nov 18 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.3-1
 - 4.5.3
 
