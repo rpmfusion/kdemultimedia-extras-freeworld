@@ -1,7 +1,7 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.5.3
-Release: 2%{?dist}
+Version: 4.5.4
+Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
 Group:   Applications/Multimedia
@@ -20,19 +20,15 @@ BuildRequires:  libjpeg-devel
 
 Requires: kdelibs4%{?_isa} >= %{_kde4_version}
 
-Provides: ffmpegthumbnailer = %{version}-%{release}
 Provides: kffmpegthumbnailer = %{version}-%{release}
 %if 0%{?fedora} && 0%{?fedora} < 15
-Obsoletes: ffmpegthumbnailer <= %{version}-%{release}
-Obsoletes: ffmpegthumbnailer-devel <= %{version}-%{release}
 Obsoletes: kffmpegthumbnailer <= %{version}-%{release}
 %endif
 
 
 %description
 This package contains multimedia applications, including:
-* ffmpegthumbnailer
-* kffmpegthumbnailer 
+* KDE ffmpegthumbnailer service
 
 
 %prep
@@ -67,6 +63,11 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Dec 09 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.4-1
+- 4.5.4
+- drop Obsoletes/Provides: ffmpegthumbnailer(-devel)
+
+
 * Mon Nov 22 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.3-2
 - Obsoletes: ffmpegthumbnailer-devel too
 
