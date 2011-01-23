@@ -1,6 +1,6 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.5.85
+Version: 4.6.0
 Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
@@ -8,7 +8,7 @@ Group:   Applications/Multimedia
 # see also: http://techbase.kde.org/Policies/Licensing_Policy
 License: GPLv2+
 URL:     http://www.kde.org/
-Source0: ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/kdemultimedia-%{version}.tar.bz2
+Source0: ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdemultimedia-%{version}.tar.bz2
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -57,12 +57,18 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING README AUTHORS
+%doc ffmpegthumbs/ffmpegthumbnailer/AUTHORS
+%doc ffmpegthumbs/ffmpegthumbnailer/ChangeLog
+%doc ffmpegthumbs/ffmpegthumbnailer/README
+%doc COPYING
 %{_kde4_libdir}/kde4/ffmpegthumbs.so
 %{_kde4_datadir}/kde4/services/ffmpegthumbs.desktop
 
 
 %changelog
+* Sun Jan 23 2011 Rex Dieter <rdieter@fedoraproject.org> - 4.6.0-1
+- 4.6.0
+
 * Thu Dec 09 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.85-1
 - 4.5.85 (4.6beta2)
 - drop Obsoletes/Provides ffmpegthumnailer
