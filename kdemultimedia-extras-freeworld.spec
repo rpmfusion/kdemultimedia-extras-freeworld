@@ -1,6 +1,6 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.6.0
+Version: 4.6.1
 Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
@@ -66,6 +66,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Apr 08 2011 Rex Dieter <rdieter@fedoraproject.org> 4.6.1-1
+- 4.6.1
+
 * Sun Jan 23 2011 Rex Dieter <rdieter@fedoraproject.org> - 4.6.0-1
 - 4.6.0
 
