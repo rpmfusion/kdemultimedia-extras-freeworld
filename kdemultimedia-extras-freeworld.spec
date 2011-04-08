@@ -1,6 +1,6 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.5.4
+Version: 4.6.1
 Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
@@ -22,7 +22,7 @@ Requires: kdelibs4%{?_isa} >= %{_kde4_version}
 
 Provides: kffmpegthumbnailer = %{version}-%{release}
 %if 0%{?fedora} && 0%{?fedora} < 15
-Obsoletes: kffmpegthumbnailer <= %{version}-%{release}
+Obsoletes: kffmpegthumbnailer < %{version}-%{release}
 %endif
 
 
@@ -57,16 +57,27 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING README AUTHORS
+%doc ffmpegthumbs/ffmpegthumbnailer/AUTHORS
+%doc ffmpegthumbs/ffmpegthumbnailer/ChangeLog
+%doc ffmpegthumbs/ffmpegthumbnailer/README
+%doc COPYING
 %{_kde4_libdir}/kde4/ffmpegthumbs.so
 %{_kde4_datadir}/kde4/services/ffmpegthumbs.desktop
 
 
 %changelog
-* Thu Dec 09 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.4-1
-- 4.5.4
-- drop Obsoletes/Provides: ffmpegthumbnailer(-devel)
+* Fri Apr 08 2011 Rex Dieter <rdieter@fedoraproject.org> 4.6.1-1
+- 4.6.1
 
+* Sun Jan 23 2011 Rex Dieter <rdieter@fedoraproject.org> - 4.6.0-1
+- 4.6.0
+
+* Thu Dec 09 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.85-1
+- 4.5.85 (4.6beta2)
+- drop Obsoletes/Provides ffmpegthumnailer
+
+* Mon Nov 22 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.80-1
+- 4.5.80 (4.6beta1)
 
 * Mon Nov 22 2010 Rex Dieter <rdieter@fedoraproject.org> - 4.5.3-2
 - Obsoletes: ffmpegthumbnailer-devel too
