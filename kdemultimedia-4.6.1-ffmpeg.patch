@@ -1,0 +1,12 @@
+diff -up kdemultimedia-4.6.1/ffmpegthumbs/CMakeLists.txt.ffmpeg kdemultimedia-4.6.1/ffmpegthumbs/CMakeLists.txt
+--- kdemultimedia-4.6.1/ffmpegthumbs/CMakeLists.txt.ffmpeg	2011-01-19 16:23:19.000000000 -0600
++++ kdemultimedia-4.6.1/ffmpegthumbs/CMakeLists.txt	2011-04-08 11:31:03.827796748 -0500
+@@ -1,6 +1,7 @@
+ include_directories(
+     ${CMAKE_CURRENT_BINARY_DIR}
+-    ${PC_LIBAVCODEC_INCLUDEDIR}
++    ${PC_AVCODEC_INCLUDEDIR}
++    ${PC_AVFORMAT_INCLUDEDIR}
+     ${FFMPEG_INCLUDE_DIR}
+     )
+ 

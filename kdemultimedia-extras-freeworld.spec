@@ -9,8 +9,10 @@ Group:   Applications/Multimedia
 License: GPLv2+
 URL:     http://www.kde.org/
 Source0: ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdemultimedia-%{version}.tar.bz2
-
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+
+## upstreamable patches
+Patch50: kdemultimedia-4.6.1-ffmpeg.patch
 
 BuildRequires:  ffmpeg-devel
 BuildRequires:  glib2-devel
@@ -33,6 +35,8 @@ This package contains multimedia applications, including:
 
 %prep
 %setup -q -n kdemultimedia-%{version}
+
+%patch50 -p1 -b .ffmpeg
 
 
 %build
