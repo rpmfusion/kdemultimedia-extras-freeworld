@@ -1,6 +1,6 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.6.1
+Version: 4.7.0
 Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
@@ -10,9 +10,6 @@ License: GPLv2+
 URL:     http://www.kde.org/
 Source0: ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kdemultimedia-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-
-## upstreamable patches
-Patch50: kdemultimedia-4.6.1-ffmpeg.patch
 
 BuildRequires:  ffmpeg-devel
 BuildRequires:  glib2-devel
@@ -35,8 +32,6 @@ This package contains multimedia applications, including:
 
 %prep
 %setup -q -n kdemultimedia-%{version}
-
-%patch50 -p1 -b .ffmpeg
 
 
 %build
@@ -70,6 +65,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Aug 12 2011 Magnus Tuominen magnus.tuominen@gmail.com> 4.7.0-1
+- 4.7.0
+- patch50 no longer needed
+
 * Fri Apr 08 2011 Rex Dieter <rdieter@fedoraproject.org> 4.6.1-1
 - 4.6.1
 
