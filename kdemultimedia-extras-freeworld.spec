@@ -1,7 +1,7 @@
 
 Name:    kdemultimedia-extras-freeworld
-Version: 4.7.0
-Release: 2%{?dist}
+Version: 4.7.3
+Release: 1%{?dist}
 Summary: KDE Multimedia applications
 
 Group:   Applications/Multimedia
@@ -65,6 +65,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Nov 01 2011 Rex Dieter <rdieter@fedoraproject.org> 4.7.3-1
+- 4.7.3
+
 * Mon Sep 26 2011 Nicolas Chauvet <kwizart@gmail.com> - 4.7.0-2
 - Rebuilt for FFmpeg-0.8
 
