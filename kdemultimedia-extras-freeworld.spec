@@ -1,7 +1,7 @@
 
 Name:    kdemultimedia-extras-freeworld
 Version: 4.7.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: KDE Multimedia applications
 
 Group:   Applications/Multimedia
@@ -65,6 +65,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Feb 08 2012 Nicolas Chauvet <kwizart@gmail.com> - 4.7.2-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Tue Nov 01 2011 Rex Dieter <rdieter@fedoraproject.org> 4.7.2-1
 - 4.7.2
 
