@@ -1,7 +1,7 @@
 
 Name:    kdemultimedia-extras-freeworld
 Version: 4.7.2
-Release: 4%{?dist}
+Release: 5%{?dist}
 Summary: KDE Multimedia applications
 
 Group:   Applications/Multimedia
@@ -65,6 +65,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Jun 26 2012 Nicolas Chauvet <kwizart@gmail.com> - 4.7.2-5
+- Rebuilt for FFmpeg
+
 * Fri Mar 02 2012 Nicolas Chauvet <kwizart@gmail.com> - 4.7.2-4
 - Rebuilt for c++ ABI breakage
 
